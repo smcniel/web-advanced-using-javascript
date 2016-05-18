@@ -1,0 +1,23 @@
+.site {
+	@include flexbox();
+   @include flex-direction(column);
+   height: 100%;
+}
+
+.site-header,
+.site-footer {
+	flex: none;
+}
+
+.site-content {
+	flex: 1 0 auto;
+	width: 100%;
+}
+
+.site-content::after {
+	content: '\00a0'; // non breakable space
+	display: block;
+	margin-top: $space;
+	height: 0px;
+	visibility: hidden;
+}

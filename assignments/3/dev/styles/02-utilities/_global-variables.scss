@@ -1,0 +1,38 @@
+// =============================================================================
+// Z Indexing
+// =============================================================================
+$zOverlay: 1000;
+$zCanvas:  5000;
+
+// =============================================================================
+// Font Sizes and Leading
+// =============================================================================
+$font-size-base: 16px;
+$leading: 1.5 * $font-size-base; 
+$font-header: 400 2em 'Josefin+Sans', sans-serif;
+$font-header2: 400 2em 'Josefin+Sans', sans-serif;
+// $font-body: 300 .8em 'Open+Sans', sans-serif;
+$font-body: 300 .8em 'Josefin+Sans', sans-serif;
+$leading-smBody: 1.25em;	
+$leading-lgBody: 1.375em;
+
+// =============================================================================
+// Responsive Breakpoints
+// =============================================================================
+// min width
+$width-ipad: 768px;
+$width-large: 1024px;
+
+// =============================================================================
+// Colors
+// =============================================================================
+
+$color-foreground: #555;
+$color-text-header: rgba(222, 50, 60, .9);
+$color-text-header2: #fff;
+$color-text-body: #fff;
+$color-section: rgba(32, 35, 41, 1);
+
+$space: 1.5em;
+$space-lg: 3em;
+

@@ -1,0 +1,35 @@
+.header-titles {
+	display: flex;
+}
+
+.header-title {
+	display: none;
+}
+
+.header {
+	position: flex;
+	text-align: center;
+}
+
+// .site-header {
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    height: 3em;
+//    line-height: 3em;
+//    background-color: transparent;
+//    width: 100%;
+//    z-index: 1000;
+//    flex: none;
+   // clear: both;
+
+   // ul {
+   //    position: absolute;
+   //    right: 20px;
+   //    bottom: 4px;
+
+   //    a {
+   //       color: $color-nav-links;
+   //    }
+   // }
+// }

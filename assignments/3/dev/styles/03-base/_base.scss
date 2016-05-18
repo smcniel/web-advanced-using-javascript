@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+   height: 100%;
+}
+
+.letter {
+   font: $font-header;
+   color: $color-text-header;
+}
+
+.section-heading {
+   font: $font-header;
+   color: $color-text-header2;
+   // font-size: 1.333em;
+   @include break-med {
+         font-weight: 400;
+      }
+}
+
+.header-exLg {
+   @extend .section-heading;
+   font-size: 2em;
+   // vertical-align: text-bottom;
+   @include break-med {
+      font-size: 4em;
+      padding-top: 4px;
+      font-weight: 600;
+   }
+}
+
+.header-lg {
+   @extend .section-heading;
+   font-size: .75em;
+   @include break-med {
+      font-size: 1.2em;
+   }
+}
+
+.header-base {
+   @extend .section-heading;
+   font-size: 0.375em;
+   @include break-med {
+      font-size: .75em;
+   }
+}
+
+.header-savage {
+   @extend .header-lg;
+   text-align: right;
+   padding-right: 10px;
+   padding-top: 4px;
+   @include break-med {
+      padding-top: 14px;
+   }
+}
+
+.header-is {
+   @extend .header-base;
+   text-align: right;
+   padding-right: 10px;
+   padding-top: 4px;
+   @include break-med {
+      padding-top: 0px;
+   }
+}
+
+.header-strut {
+   color: transparent;
+}
+
+.body-text {
+   font: $font-body;
+   line-height: $leading;
+   color: $color-text-body;
+   @include break-med {
+      font-size: 0.9em;
+      margin: .3em 0 1em;
+   }
+   @include break-lg {
+      font-size: 0.9em;
+      margin: .5em 0 1em;
+   }
+}
+
+.body-textExample {
+   @extend .body-text;
+   padding-left: 1em;
+   padding-right: 1em; 
+}
+
+.anim-text {
+   font-size: .2em;
+   color: rgba(255, 255, 255, 0.4);
+   line-height: $leading / 2;
+   max-width: 120px;
+   text-align: justify;
+}
+
+.anim-text2 {
+   @extend .anim-text;
+   // padding-top: 20px;
+   margin-left: 140px;
+   margin-top: -240px;
+}
+

@@ -1,0 +1,207 @@
+// ============================================================================
+// SECTIONS
+// ============================================================================
+.section {
+   padding: 0 $space;
+   background-color: $color-section;
+}
+
+.section-intro {
+   @extend .section;
+   @include break-med {
+      height: 100vh;
+   }
+}
+
+.section-example {
+   @extend .section;
+   background-color: white;
+}
+
+.section-smallView {
+   padding: 0 $space;
+   background-color: $color-section;
+   @include break-med {
+      height: 50vh;
+   }	
+}
+
+.container {
+	max-width: 60em; // 800px max
+	margin: 0 auto;
+	height: 100%;
+}
+
+.container-overlay {
+   position: absolute;
+   z-index: $zOverlay;
+   width: 30em;
+   height: 50vh;
+   margin-left: 20px;
+   @include break-lg {opacity: 0;}
+}
+// #canvas {
+//    position: absolute;
+//    z-index: $zCanvas;
+//    width: 400px;
+// }
+
+// ============================================================================
+// FLEX BOXES
+// ============================================================================
+.column-box {
+   @include flexbox(); 
+   @include flex-direction(column);
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.column-cellFit1 { @include flex(1); }
+
+.row-box {
+   @include flexbox(); 
+   @include flex-direction(row);
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.letter-outerBox {
+   @extend .column-box;
+   max-height: 300px;
+   max-width: 300px;
+   margin: auto;
+   @include break-med {
+      height: 600px;
+      width: 600px;
+   }
+   @include break-lg {
+      height: 800px;
+      width: 800px;
+   }
+}
+
+.example-row {
+   @extend .row-box;
+   @include flex-wrap(wrap);
+   margin-top: 20px;
+   @include align-items(stretch); 
+}
+
+.project-outerBox {
+   @extend .column-box;
+   height: 100%;
+}
+
+.project-innerBox {
+   @include flex(none);
+}
+
+.project-row {
+   @extend .row-box;
+   @include flex-wrap(wrap);
+}
+
+.column-cell1 { @include flex(1); }
+
+.column-cell2 { @include flex(2); }
+
+.row-cell1 { @include flex(1); }
+
+.row-cell2 { @include flex(2); }
+
+.example {
+   @include flex(none);
+}
+.row-cellBlack {
+   background-color: $color-section;
+   @include align-self(center);
+   height: 100%;
+}
+
+.artificial-cell2 {
+   @extend .row-cell2;
+   @include break-lg {opacity: 0;}
+}
+
+.projectTop-colCell1 {
+   @extend .column-cell1;
+   max-height: 64px;
+}
+
+.project-rowCell1 {
+   @extend .row-cell1;
+   @include order(2);
+   max-width: 1px;
+   @include break-med {
+      @include order(1);
+      max-width: 100%;
+   }
+}
+
+.project-rowCell2 {
+   @extend .row-cell2;
+   @include order(1);
+   max-width: 768px;
+   @include break-med {
+      @include order(2);
+   }
+}
+
+.example-cell1 {
+   @extend .row-cell1;
+   max-width: 400px;
+}
+
+.video-row {
+   justify-content: center;
+   height: 100%;
+}
+
+.video-cell {
+   @include flexbox();
+   justify-content: center;
+   @include align-self(center);
+}
+
+.spacer {
+   @include flex(auto);
+   background-color: $color-section;  
+}
+
+.letters {
+   @include flex(none);
+   justify-content: center;
+}
+
+.examples {
+   @include flex(none);
+   justify-content: center;
+}
+
+.example-graphic {
+   @include flex(none);
+   height: auto;
+}
+
+.example-text {
+   @include flex(none);
+   justify-content: center;
+}
+
+.img-med {
+   display:none;
+}
+
+.img-lg {
+   display:none;
+}
+
+.rawimg-med {
+   display:none;
+}
+
+.title-figure {
+   margin:0;
+}
