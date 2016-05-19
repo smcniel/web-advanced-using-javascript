@@ -22,6 +22,15 @@ html {
       }
 }
 
+.header-hack {
+   display: none;
+   // color: rgba(0,0,0,0);
+}
+
+.header-title {
+   @extend .section-heading;
+}
+
 .header-exLg {
    @extend .section-heading;
    font-size: 2em;

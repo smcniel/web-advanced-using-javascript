@@ -15,7 +15,12 @@
 
 .section-example {
    @extend .section;
-   background-color: white;
+   background-color: $color-section;
+}
+
+.section-example2 {
+   @extend .section;
+   background-color: $color-section;
 }
 
 .section-smallView {
@@ -114,10 +119,14 @@
 .example {
    @include flex(none);
 }
-.row-cellBlack {
+.row-cellInfo {
    background-color: $color-section;
    @include align-self(center);
-   height: 100%;
+   width: 300px;
+   height: auto;
+   @include break-lg {
+      width: 400px;
+   }
 }
 
 .artificial-cell2 {
@@ -188,18 +197,37 @@
 .example-text {
    @include flex(none);
    justify-content: center;
+   height: 100%;
 }
 
 .img-med {
    display:none;
+   @include break-med {
+      display: block;
+   }
+   @include break-lg {
+      display: none;
+   }
 }
 
 .img-lg {
    display:none;
+   @include break-lg {
+      display: block;
+   }
 }
 
 .rawimg-med {
+   @include break-lg {
+      display:none;
+   }
+}
+
+.rawimg-lg {
    display:none;
+   @include break-lg {
+      display: block;
+   }
 }
 
 .title-figure {

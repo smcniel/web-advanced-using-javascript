@@ -148,6 +148,8 @@
   @media (min-width: $width-ipad) { 
       .img-sm {display:none;}
       .img-med {display: block;}
+      .rawimg-med {display:none;}
+      .rawimg-lg {display: block;}
       @content; }
 }
 
